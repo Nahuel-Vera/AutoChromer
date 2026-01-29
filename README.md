@@ -50,8 +50,21 @@ Convertir archivos de audio (FFmpeg)
 FFMPEG_PATH=C:/Users/USUARIO/Desktop/Git/python/Autom chromer/webScraping SeleniumPY/ffmpeg/bin
 POPPLER_PATH=C:/Users/USUARIO/Desktop/Git/python/Autom chromer/webScraping SeleniumPY/poppler/Library/bin
 
-🧠 Detalles técnicos
-Las rutas base del proyecto se determinan dinámicamente en la clase driver_manager, buscando el proyecto en:
+## 🧠 Detalles técnicos
+En la clase `driver_manager` se definen las rutas por defecto donde el programa intenta localizar el proyecto.
+Por defecto, se buscan las siguientes ubicaciones:
+
+- `Desktop/Git/python/Autom chromer`
+- `OneDrive/Desktop/Git/python/Autom chromer`
+- Ruta actual desde donde se ejecuta el script
+
+```python
+paths_to_check = [
+    os.path.join(os.path.expanduser("~"), "Desktop", "Git", "python", "Autom chromer"),
+    os.path.join(os.path.expanduser("~"), "OneDrive", "Desktop", "Git", "python", "Autom chromer"),
+    os.path.dirname(os.path.abspath(__file__))
+]
+
 
 Desktop
 OneDrive/Desktop
