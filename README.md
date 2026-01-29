@@ -64,7 +64,7 @@ paths_to_check = [
     os.path.join(os.path.expanduser("~"), "OneDrive", "Desktop", "Git", "python", "Autom chromer"),
     os.path.dirname(os.path.abspath(__file__))
 ]
-
+```
 
 Desktop
 OneDrive/Desktop
