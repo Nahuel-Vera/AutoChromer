@@ -1,0 +1,50 @@
+# Byte-compiled / optimized / temporary files
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+*.egg-info/
+.eggs/
+
+# IDEs and editors
+.idea/
+.vscode/
+*.swp
+
+# Environment
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Package managers
+# pip freeze 
+requirements.txt
+
+# virtualenv
+# Ignore the virtualenv directory itself
+# .venv
+
+# Distributions and packaging
+dist/
+build/
+*.egg
+*.whl
+
+# Tests
+.pytest_cache/
+.tox/
+
+# Editors
+.DS_Store # macOS
+Thumbs.db # Windows
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# Specific directories to ignore
+# logs/
+# tmp/

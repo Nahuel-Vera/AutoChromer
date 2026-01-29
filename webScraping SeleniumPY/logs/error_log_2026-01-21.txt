@@ -1,0 +1,69 @@
+
+======================================================================
+Fecha y Hora del error: 2026-01-21 16:36:19
+Contexto:  Error durante la automatización en la primera parte
+Tipo de error: ProtocolError
+Mensaje: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+Traceback completo:
+Traceback (most recent call last):
+  File "C:\Users\navera\Desktop\Autom chromer\webScraping SeleniumPY\env\lib\site-packages\urllib3\connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\navera\Desktop\Autom chromer\webScraping SeleniumPY\env\lib\site-packages\urllib3\connectionpool.py", line 468, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "C:\Users\navera\Desktop\Autom chromer\webScraping SeleniumPY\env\lib\site-packages\urllib3\connectionpool.py", line 463, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Program Files\Python310\lib\http\client.py", line 1368, in getresponse
+    response.begin()
+  File "C:\Program Files\Python310\lib\http\client.py", line 317, in begin
+    version, status, reason = self._read_status()
+  File "C:\Program Files\Python310\lib\http\client.py", line 286, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\navera\Desktop\Autom chromer\webScraping SeleniumPY\python\test\PhotoPy\photoPy.py", line 261, in abrir_pagina_login
+    xpath = capturar_xpath2(driver)
+  File "c:\Users\navera\Desktop\Autom chromer\webScraping SeleniumPY\python\test\PhotoPy\photoPy.py", line 210, in capturar_xpath2
+    result = WebDriverWait(driver, 9999).until(
+  File "C:\Users\navera\Desktop\Autom chromer\webScraping SeleniumPY\env\lib\site-packages\selenium\webdriver\support\wait.py", line 86, in until
+    value = method(self._driver)
+  File "c:\Users\navera\Desktop\Autom chromer\webScraping SeleniumPY\python\test\PhotoPy\photoPy.py", line 211, in <lambda>
+    lambda d: d.execute_script("""
+  File "C:\Users\navera\Desktop\Autom chromer\webScraping SeleniumPY\env\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 500, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+  File "C:\Users\navera\Desktop\Autom chromer\webScraping SeleniumPY\env\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 438, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "C:\Users\navera\Desktop\Autom chromer\webScraping SeleniumPY\env\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 290, in execute
+    return self._request(command_info[0], url, body=data)
+  File "C:\Users\navera\Desktop\Autom chromer\webScraping SeleniumPY\env\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 311, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+  File "C:\Users\navera\Desktop\Autom chromer\webScraping SeleniumPY\env\lib\site-packages\urllib3\request.py", line 81, in request
+    return self.request_encode_body(
+  File "C:\Users\navera\Desktop\Autom chromer\webScraping SeleniumPY\env\lib\site-packages\urllib3\request.py", line 173, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\Users\navera\Desktop\Autom chromer\webScraping SeleniumPY\env\lib\site-packages\urllib3\poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\Users\navera\Desktop\Autom chromer\webScraping SeleniumPY\env\lib\site-packages\urllib3\connectionpool.py", line 802, in urlopen
+    retries = retries.increment(
+  File "C:\Users\navera\Desktop\Autom chromer\webScraping SeleniumPY\env\lib\site-packages\urllib3\util\retry.py", line 552, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "C:\Users\navera\Desktop\Autom chromer\webScraping SeleniumPY\env\lib\site-packages\urllib3\packages\six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\navera\Desktop\Autom chromer\webScraping SeleniumPY\env\lib\site-packages\urllib3\connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\navera\Desktop\Autom chromer\webScraping SeleniumPY\env\lib\site-packages\urllib3\connectionpool.py", line 468, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "C:\Users\navera\Desktop\Autom chromer\webScraping SeleniumPY\env\lib\site-packages\urllib3\connectionpool.py", line 463, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Program Files\Python310\lib\http\client.py", line 1368, in getresponse
+    response.begin()
+  File "C:\Program Files\Python310\lib\http\client.py", line 317, in begin
+    version, status, reason = self._read_status()
+  File "C:\Program Files\Python310\lib\http\client.py", line 286, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+======================================================================
