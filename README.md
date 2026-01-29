@@ -1,34 +1,75 @@
-Instalar python y pip 
-generar el enviroment en la carpeta Autom chromer
-posicionado en la carpeta "Autom chromer" usar el siguiente comando
-Para generar el env: "python -m venv env"
+AutoChromer 🤖🧭
 
-Usar el comando "pip install -r '.\webScraping SeleniumPY\requirements2.txt'", el cual instala las correspondientes dependencias necesarias para utilizar el programa
+Automatización de procesos con Python + Selenium, orientada a scraping, procesamiento de PDFs y manejo de archivos multimedia.
+El proyecto permite ejecutar flujos automatizados desde una interfaz gráfica, utilizando drivers configurables y soporte opcional para conversión de archivos.
 
-al ejecutar, ejecutar desde ".\webScraping SeleniumPY\python\test\PhotoPy\interfaz.py"
+🚀 Features
+Automatización web con Selenium
+Interfaz gráfica en Python
+Soporte para procesamiento de PDFs
+Conversión de archivos de audio (opcional)
+Configuración flexible mediante variables de entorno
+
+🛠️ Tech Stack
+Python
+Selenium
+Tkinter
+FFmpeg (opcional)
+Poppler (opcional)
+
+📦 Instalación
+1️⃣ Requisitos
+Python 3.x
+pip
+
+2️⃣ Crear entorno virtual
+Ubicate en la raíz del proyecto Autom chromer:
+python -m venv env
+
+Activá el entorno virtual:
+env\Scripts\activate
+
+3️⃣ Instalar dependencias
+pip install -r ".\webScraping SeleniumPY\requirements2.txt"
+
+▶️ Uso
+Ejecutar el programa desde:
+.\webScraping SeleniumPY\python\test\PhotoPy\interfaz.py
+
+⚙️ Configuración (.env)
+Crear un archivo .env en la raíz del proyecto con las siguientes variables:
+FFMPEG_PATH=
+POPPLER_PATH=
 
 
-Detalles tecnicos a tener en cuenta:
+Estas variables son opcionales y solo necesarias si se requiere:
+Extraer imágenes desde PDFs (Poppler)
+Convertir archivos de audio (FFmpeg)
 
-Respecto al programa, tener en cuenta que en la clase "driver_manager" se encuentran las direcciones por defecto, en este caso entramos en base al "usuario/Desktop" o "usuario/OneDrive"
+📌 Ejemplo
+FFMPEG_PATH=C:/Users/USUARIO/Desktop/Git/python/Autom chromer/webScraping SeleniumPY/ffmpeg/bin
+POPPLER_PATH=C:/Users/USUARIO/Desktop/Git/python/Autom chromer/webScraping SeleniumPY/poppler/Library/bin
 
-serian estas lineas:
-paths_to_check = [ #Desktop\Autom chromer
-            os.path.join(os.path.expanduser("~"), "Desktop", "Git", "python", "Autom chromer"),
-            os.path.join(os.path.expanduser("~"), "OneDrive", "Desktop", "Git", "python", "Autom chromer"),
-            os.path.dirname(os.path.abspath(__file__))
-        ]
+🧠 Detalles técnicos
+Las rutas base del proyecto se determinan dinámicamente en la clase driver_manager, buscando el proyecto en:
 
-y en el .env completar con las variables:
-"FFMPEG_PATH="
-"POPPLER_PATH="
+Desktop
+OneDrive/Desktop
+Ruta actual del script
+Esto permite flexibilidad según el entorno del usuario.
 
-estas son librerias que se requieren en caso de buscar sacar fotos a PDFs con "POPPLER" y "FFMPEG" para convertir archivos EJ .wave a .mp3
-Dependiendo de para que se utilice el proceso, puede llegar a ser util:
+📁 Notas
+El entorno virtual (env) no se sube al repositorio
+El archivo .env es local
+Las rutas pueden adaptarse según el sistema
 
-en mi caso las tengo misma carpeta
-y reemplazar el usuario "(usuarioNahu)"
+📌 Estado del proyecto
+🟡 En desarrollo / uso personal
+Mejoras futuras incluyen:
+Mayor modularización
+Logging avanzado
+Manejo de errores centralizado
 
-FFMPEG_PATH=C:/Users/(usuarioNahu)/Desktop/Git/python/Autom chromer/webScraping SeleniumPY/ffmpeg/ffmpeg-version-7.1.1/ffmpeg-7.0.2-essentials_build/bin
-
-POPPLER_PATH=C:/Users/(usuarioNahu)/Desktop/Git/python/Autom chromer/webScraping SeleniumPY/poppler-24.08.0/Library/bin
+🧑‍💻 Autor
+Nahuel Vera
+Python Automation & Web Scraping
